@@ -1,0 +1,2 @@
+# avaloniaPlayground
+Project for studies
