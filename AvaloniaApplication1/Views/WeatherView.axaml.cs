@@ -2,10 +2,15 @@
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 
-namespace AvaloniaApplication1.Views;
+namespace WeatherApp.Views;
 
-public partial class WeatherView : Window{
+public partial class WeatherView : UserControl{
     public WeatherView(){
         InitializeComponent();
+    }
+    
+    private void InitializeComponent()
+    {
+        AvaloniaXamlLoader.Load(this);
     }
 }

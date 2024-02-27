@@ -1,9 +1,9 @@
 using System;
 using Avalonia.Controls;
 using Avalonia.Controls.Templates;
-using AvaloniaApplication1.ViewModels;
+using WeatherApp.ViewModels;
 
-namespace AvaloniaApplication1;
+namespace WeatherApp;
 
 public class ViewLocator : IDataTemplate{
     public Control? Build(object? data){

@@ -2,16 +2,46 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:vm="using:AvaloniaApplication1.ViewModels"
-        x:DataType="vm:WeatherViewModel"
+        xmlns:vm="using:WeatherApp.ViewModels"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        x:Class="AvaloniaApplication1.Views.WeatherView">
+        x:Class="WeatherApp.Views.WeatherView"
+        x:DataType="vm:WeatherViewModel">
     
-        <DockPanel>
-                <TextBox AcceptsReturn="True"  Watermark="Specify the name of city"></TextBox>
-                <Button>Send request</Button>
-                
-        </DockPanel>
-        
+    <StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBox Width="200" AcceptsReturn="True"  Watermark="Specify the name of city" 
+                     Text="{Binding NewCityName}"></TextBox>
+            <Button Command="{Binding AddNewCityCommand}">Send request</Button>
+        </StackPanel>
+        <ItemsControl ItemsSource="{Binding Weathers}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock>
+                            <Run Text="Państwo:"/>
+                            <Run Text="{Binding location.country}"/>
+                            <LineBreak/>
+                            <Run Text="Miasto:"/>
+                            <Run Text="{Binding location.name}"/>
+                            <LineBreak/>
+                            <Run Text="Czas:"/>
+                            <Run Text="{Binding location.localtime}"/>
+                            <LineBreak/>
+                            <Run Text="Temperatura:"/>
+                            <Run Text="{Binding current.temp_c}"/>
+                           
+                            <LineBreak/>
+                            <LineBreak/>
+                        
+                        </TextBlock>
+                        <Image Source="{Binding WeatherIcon}"
+                               Width="100"
+                               Height="100"
+                               Name="MyImage"></Image>
+                    </StackPanel>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </StackPanel>
 </UserControl>
 

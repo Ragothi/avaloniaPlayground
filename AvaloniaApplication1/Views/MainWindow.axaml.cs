@@ -5,16 +5,22 @@ using System.Net.Http;
 using System.Text.Json;
 using System.Threading.Tasks;
 using Avalonia.Controls;
-using AvaloniaApplication1.ViewModels;
+using Avalonia.Markup.Xaml;
+using WeatherApp.ViewModels;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 
-namespace AvaloniaApplication1.Views;
+namespace WeatherApp.Views;
 
 public partial class MainWindow : Window{
    
     
     public MainWindow(){
         InitializeComponent();
+    }
+    
+    private void InitializeComponent()
+    {
+        AvaloniaXamlLoader.Load(this);
     }
     
 }

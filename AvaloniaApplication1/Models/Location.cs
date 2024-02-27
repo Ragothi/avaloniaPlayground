@@ -1,4 +1,4 @@
-﻿namespace AvaloniaApplication1;
+﻿namespace WeatherApp;
 
 public class Location
 {
@@ -10,4 +10,8 @@ public class Location
     public string tz_id { get; set; }
     public int localtime_epoch { get; set; }
     public string localtime { get; set; }
+
+    public override string ToString(){
+        return $"Państwo: {country} \nMiasto: {name}\nRegion: {region}\nGodzina: {localtime}";
+    }
 }

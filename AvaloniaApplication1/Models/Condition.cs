@@ -1,4 +1,4 @@
-﻿namespace AvaloniaApplication1;
+﻿namespace WeatherApp;
 
 // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse);
 public class Condition

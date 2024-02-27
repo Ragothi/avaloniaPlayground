@@ -1,4 +1,4 @@
-﻿namespace AvaloniaApplication1;
+﻿namespace WeatherApp;
 
 public class Current
 {

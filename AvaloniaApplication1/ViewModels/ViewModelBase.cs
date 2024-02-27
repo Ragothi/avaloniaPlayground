@@ -1,6 +1,6 @@
 ﻿using ReactiveUI;
 
-namespace AvaloniaApplication1.ViewModels;
+namespace WeatherApp.ViewModels;
 
 public class ViewModelBase : ReactiveObject{
 }
